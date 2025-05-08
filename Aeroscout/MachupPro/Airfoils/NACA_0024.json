@@ -1,0 +1,16 @@
+{
+	"NACA_0024"	:	{
+		"properties": {
+			"type": "linear",
+			"aL0": 0,
+			"CLa": 5.3899,
+			"CmL0": 0,
+			"Cma": 0,
+			"CD0": 0.0098,
+			"CD1": 0,
+			"CD2": 0.0093,
+			"CL_max": 1.2,
+			"Comments"	:	"All angles in radians and slopes in 1/radians"
+		}
+	}
+}
