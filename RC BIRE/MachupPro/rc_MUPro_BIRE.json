@@ -1,0 +1,248 @@
+{
+    "run": {
+        "forces": "",
+        "_stl": "",
+        "_derivatives": ""
+    },
+    "solver": {
+        "type": "linear",
+        "convergence": 1e-06,
+        "relaxation": 0.9
+    },
+    "plane": {
+        "name": "MyAirplane",
+        "CGx": 0,
+        "CGy": 0,
+        "CGz": 0
+    },
+    "reference": {
+        "area": 2.98,
+        "longitudinal_length": 1.097,
+        "lateral_length": 3
+    },
+    "condition": {
+        "alpha": 20.0,
+        "beta": 0,
+        "omega": {
+            "roll": 0.08567979964335799,
+            "pitch": 0,
+            "yaw": 0
+        }
+    },
+    "controls": {
+        "elevator": {
+            "is_symmetric": 1,
+            "deflection": 0
+        },
+        "aileron": {
+            "is_symmetric": 0,
+            "deflection": 0
+        }
+    },
+    "airfoil_DB": ".",
+    "wings": {
+        "Main": {
+            "name": "Main",
+            "ID": 1,
+            "is_main": 1,
+            "side": "both",
+            "connect": {
+                "ID": 0,
+                "location": "tip",
+                "dx": 0.06948,
+                "dy": 0,
+                "dz": 0,
+                "yoffset": 0
+            },
+            "span": 1.5,
+            "sweep": 30.0,
+            "sweep_file": "rc_bire_main_fuse_sweep.txt",
+            "dihedral": 0,
+            "mounting_angle": 0,
+            "washout": 0,
+            "root_chord": 1.30208333,
+            "tip_chord": 0.4375,
+            "chord_file": "rc_bire_main_fuse_chord.txt",
+            "airfoils": {
+                "rc_bire_fuselage": "",
+                "NACA_64A204": ""
+            },
+            "af_ratio_file": "rc_bire_main_fuse_airfoils.txt",
+            "grid": 100,
+            "control": {
+                "has_control_surface": true,
+                "span_root": 0.2222,
+                "span_tip": 0.8194,
+                "chord_root": 0.192,
+                "chord_tip": 0.196,
+                "is_sealed": 1,
+                "mix": {
+                    "elevator": 0,
+                    "aileron": 1,
+                    "flap": 0
+                }
+            },
+            "sameAsRoot": true
+        },
+        "VertFuse": {
+            "name": "VertFuse",
+            "ID": 2,
+            "is_main": 0,
+            "side": "right",
+            "connect": {
+                "ID": 0,
+                "location": "tip",
+                "dx": 0.39265,
+                "dy": 0,
+                "dz": 0.25,
+                "yoffset": 0
+            },
+            "span": 0.5,
+            "sweep": 0.0,
+            "dihedral": 90.0,
+            "mounting_angle": 0,
+            "washout": 0,
+            "root_chord": 3.25,
+            "tip_chord": 3.25,
+            "airfoils": {
+                "rc_bire_vertfuselage": ""
+            },
+            "grid": 30,
+            "sameAsRoot": true
+        },
+        "R_Hstab": {
+            "name": "Hstab",
+            "ID": 3,
+            "is_main": 0,
+            "side": "right",
+            "connect": {
+                "ID": 0,
+                "location": "tip",
+                "dx": -1.464375,
+                "dy": -0.0976213098305237,
+                "dz": 0.2356786901694763,
+                "yoffset": 0.3333
+            },
+            "span": 0.583333,
+            "sweep": 31,
+            "dihedral": -55.0,
+            "mounting_angle": 0,
+            "washout": 0,
+            "root_chord": 0.7708333,
+            "tip_chord": 0.3125,
+            "airfoils": {
+                "NACA_0005": ""
+            },
+            "grid": 100,
+            "control": {
+                "has_control_surface": true,
+                "span_root": 0,
+                "span_tip": 1,
+                "chord_root": 1,
+                "chord_tip": 1,
+                "is_sealed": 1,
+                "mix": {
+                    "elevator": 1,
+                    "aileron": 0.25,
+                    "flap": 0
+                }
+            },
+            "sameAsRoot": true
+        },
+        "L_Hstab": {
+            "name": "Hstab",
+            "ID": 4,
+            "is_main": 0,
+            "side": "left",
+            "connect": {
+                "ID": 0,
+                "location": "tip",
+                "dx": -1.464375,
+                "dy": 0.09732130983052373,
+                "dz": -0.2356786901694763,
+                "yoffset": 0.3333
+            },
+            "span": 0.583333,
+            "sweep": 31,
+            "dihedral": 35.0,
+            "mounting_angle": 0,
+            "washout": 0,
+            "root_chord": 0.7708333,
+            "tip_chord": 0.3125,
+            "airfoils": {
+                "NACA_0005": ""
+            },
+            "grid": 100,
+            "control": {
+                "has_control_surface": true,
+                "span_root": 0,
+                "span_tip": 1,
+                "chord_root": 1,
+                "chord_tip": 1,
+                "is_sealed": 1,
+                "mix": {
+                    "elevator": 1,
+                    "aileron": 0.25,
+                    "flap": 0
+                }
+            },
+            "sameAsRoot": true
+        },
+        "R_Hstab_spacer": {
+            "name": "R_Hstab_spacer",
+            "ID": 5,
+            "is_main": 0,
+            "side": "right",
+            "connect": {
+                "ID": 3,
+                "location": "root",
+                "dx": 0,
+                "dy": 0,
+                "dz": 0,
+                "yoffset": 0
+            },
+            "span": -0.18315,
+            "sweep": 0.0,
+            "sweep_file": "rc_BIRE_R_hstab_spacer_sweep.txt",
+            "dihedral": 0.0,
+            "dihedral_file": "rc_BIRE_R_hstab_spacer_dihedral.txt",
+            "mounting_angle": 0,
+            "washout": 0,
+            "root_chord": 0.7708333,
+            "tip_chord": 0.7708333,
+            "airfoils": {
+                "NACA_0005": ""
+            },
+            "grid": 50,
+            "sameAsRoot": true
+        },
+        "L_Hstab_spacer": {
+            "name": "L_Hstab_spacer",
+            "ID": 6,
+            "is_main": 0,
+            "side": "left",
+            "connect": {
+                "ID": 4,
+                "location": "root",
+                "dx": 0,
+                "dy": 0,
+                "dz": 0,
+                "yoffset": 0
+            },
+            "span": -0.18315,
+            "sweep": 0.0,
+            "sweep_file": "rc_BIRE_L_hstab_spacer_sweep.txt",
+            "dihedral": 0.0,
+            "dihedral_file": "rc_BIRE_L_hstab_spacer_dihedral.txt",
+            "mounting_angle": 0,
+            "washout": 0,
+            "root_chord": 0.7708333,
+            "tip_chord": 0.7708333,
+            "airfoils": {
+                "NACA_0005": ""
+            },
+            "grid": 50,
+            "sameAsRoot": true
+        }
+    }
+}
