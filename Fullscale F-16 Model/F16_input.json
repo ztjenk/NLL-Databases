@@ -1,0 +1,199 @@
+{
+    "F16": {
+        "cg": {
+            "cg_ft": [0, 0, 0],
+            "auto": false
+        },
+        "reference": {
+            "area_sqft": 300,
+            "longitudinal_length_ft": 11.32,
+            "lateral_length_ft": 30
+        },
+        "state": {
+            "alpha_deg": 0.0,
+            "beta_deg":  0,
+            "Vinf_fps": 222.5211,
+            "angular_rates_dps": [0, 0, 0],
+            "position_ft": [0, 0, 0],
+            "bank_deg": 0,
+            "elevation_deg": 0,
+            "heading_deg": 0
+        },
+        "controls": {
+            "aileron":  0,
+            "elevator": 0,
+            "rudder":   0.0
+        },
+        "MainWing": {
+            "is_main": true,
+            "location_ft": [2.71, 0, 0],
+            "MainWing": {
+                "side": "both",
+                "semispan_ft": 15,
+                "sweep_deg": {"span": [0,0.21,0.25,1.0], "value": [0,0,32,32]},
+                "dihedral_deg": 0,
+                "twist_deg": 0,
+                "chord_ft": {"span": [0,0.21,0.25,1.0], "value": [29.18, 29.18, 13.1, 3.71]},
+                "airfoils": {"span": [0,0.21,0.25,1.0], "value": ["af_f16_fuselage", "af_f16_fuselage", "NACA_64A204", "NACA_64A204"]},
+                "grid": 100,
+                "control_surfaces": {
+                    "aileron": {
+                        "span_range": [0.23, 0.76],
+                        "chord_fraction": {"span": [0,1], "value": [0.22, 0.22]},
+                        "is_sealed": true,
+                        "symmetric": [false],
+                        "mixing": {
+                            "aileron": 1
+                        }
+                    }
+                }
+            }
+        },
+        "VertFuse": {
+            "location_ft": [5.46, 0, 2.07],
+            "VertFuse": {
+                "side": "right",
+                "semispan_ft": 4.14,
+                "sweep_deg": 0.0,
+                "dihedral_deg": 90.0,
+                "twist_deg": 0,
+                "chord_ft": 32.18,
+                "airfoils": "af_f16_vertfuselage",
+                "grid": 30
+            }
+        },
+        "R_Hstab_and_spacer": {
+            "location_ft": [-12.51, 1.65, -0.16],
+            "R_Hstab_spacer": {    
+                "side": "right",
+                    "semispan_ft": 2,
+                    "id": 1,
+                    "sweep_deg": {"span": [0,1], "value": [0, 32]},
+                    "dihedral_deg": {"span": [0,1], "value": [0, -10]},
+                    "chord_ft": 7.98,
+                    "airfoils": "NACA_0005",
+                    "grid": 50
+            },
+            "R_Hstab": {    
+                "side": "right",
+                    "semispan_ft": 5.8,
+                    "id": 2,
+                    "sweep_deg": 32,
+                    "dihedral_deg": -10,
+                    "chord_ft": {"span": [0,1], "value": [7.98, 3.12]},
+                    "airfoils": "NACA_0005",
+                    "grid": 100,
+                    "control_surfaces": {
+                    "stabilator_R": {
+                        "span_range": [0,1],
+                        "symmetric": [true,false],
+                        "chord_fraction": 1,
+                        "is_sealed": true,
+                        "mixing": {
+                            "elevator": 1,
+                            "aileron": 0.25
+                        }
+                    }
+                }
+            }
+        },
+        "L_Hstab_and_spacer": {
+            "location_ft": [-12.51, -1.65, -0.16],
+            "L_Hstab_spacer": {    
+                "side": "left",
+                    "semispan_ft": 2,
+                    "id": 1,
+                    "sweep_deg": {"span": [0,1], "value": [0, 32]},
+                    "dihedral_deg": {"span": [0,1], "value": [0, -10]},
+                    "chord_ft": 7.98,
+                    "airfoils": "NACA_0005",
+                    "grid": 50
+            },
+            "L_Hstab": {    
+                "side": "left",
+                    "semispan_ft": 5.8,
+                    "id": 2,
+                    "sweep_deg": 32,
+                    "dihedral_deg": -10,
+                    "chord_ft": {"span": [0,1], "value": [7.98, 3.12]},
+                    "airfoils": "NACA_0005",
+                    "grid": 100,
+                    "control_surfaces": {
+                    "stabilator_L": {
+                        "span_range": [0,1],
+                        "symmetric": [true,false],
+                        "chord_fraction": 1,
+                        "is_sealed": true,
+                        "mixing": {
+                            "elevator": 1,
+                            "aileron": 0.25
+                        }
+                    }
+                }
+            }
+        },
+        "Vstab_and_spacer": {
+            "location_ft": [-5.42,0,2.07],
+            "Vstab_spacer": {
+                "side": "right",
+                "id": 1,
+                "semispan_ft": 4.14,
+                "sweep_deg": {"span": [0, 0.8, 1.0], "value": [0,0,67.56]},
+                "dihedral_deg": 90.0,
+                "chord_ft": 15.1,
+                "airfoils": "NACA_0004",
+                "grid": 50
+            },
+            "Vstab": {
+                "side": "right",
+                "semispan_ft": 8.41,
+                "id": 2,
+                "sweep_deg": {"span": [0, 0.22, 0.27, 1.0], "value": [67.56, 67.56, 43.0, 43.0]},
+                "dihedral_deg": 90.0,
+                "chord_ft": {"span": [0, 0.25, 1.0], "value": [15.1, 8.4, 3.94]},
+                "airfoils": "NACA_0004",
+                "grid": 100,
+                "control_surfaces": {
+                    "rudder": {
+                        "span_range": [0.25, 0.94],
+                        "symmetric": [false],
+                        "chord_fraction": {"span": [0,1], "value": [0.32, 0.32]},
+                        "is_sealed": true,
+                        "mixing": {
+                            "rudder": -1
+                        }
+                    }
+                }
+            }
+        },
+        "R_Ventral_Fin": {
+            "location_ft": [-6.2, 0.8528, 2.0],
+            "VertFuse": {
+                "side": "right",
+                "semispan_ft": 2.0,
+                "sweep_deg": 22.03,
+                "dihedral_deg": -75.0,
+                "twist_deg": 0,
+                "chord_ft": {"span":[0,1], "value":[4,2.6]},
+                "airfoils": "NACA_0005",
+                "grid": 30
+            }
+        },
+        "L_Ventral_Fin": {
+            "location_ft": [-6.2, -0.8528, 2.0],
+            "VertFuse": {
+                "side": "left",
+                "semispan_ft": 2.0,
+                "sweep_deg": 22.03,
+                "dihedral_deg": -75.0,
+                "twist_deg": 0,
+                "chord_ft": {"span":[0,1], "value":[4,2.6]},
+                "airfoils": "NACA_0005",
+                "grid": 30
+            }
+        }        
+    },
+    "airfoil_DB": "Airfoils",
+    "same_as_MU_pro": false,
+    "verbose": false
+}
